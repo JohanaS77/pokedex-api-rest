@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="images/pockemones.png" alt="Pokedex Logo" width="500"/>
+<img src="public/images/pockemones.png" alt="Pokedex Logo" width="500"/>
 
 **Aplicación web de consulta de Pokémon usando la PokeAPI, con enrutamiento dinámico vía URL**
 
@@ -48,22 +48,22 @@ La aplicación ofrece dos formas de consultar un Pokémon:
 
 ### 🏡 Pantalla de inicio
 <div align="center">
-  <img src="images/pan1.png" alt="Pantalla de inicio" width="800"/>
+  <img src="public/images/pan1.png" alt="Pantalla de inicio" width="800"/>
 </div>
 
 ### 🔎 Consulta por URL (`/id`)
 <div align="center">
-  <img src="images/pan2.png" alt="Consulta por URL" width="800"/>
+  <img src="public/images/pan2.png" alt="Consulta por URL" width="800"/>
 </div>
 
 ### 🧭 Página del buscador
 <div align="center">
-  <img src="images/pan3.png" alt="Página del buscador" width="800"/>
+  <img src="public/images/pan3.png" alt="Página del buscador" width="800"/>
 </div>
 
 ### 🃏 Resultado en el buscador
 <div align="center">
-  <img src="images/pan4.png" alt="Resultado en el buscador" width="800"/>
+  <img src="public/images/pan4.png" alt="Resultado en el buscador" width="800"/>
 </div>
 
 [⬆️ Volver arriba](#-tabla-de-contenido)
@@ -245,7 +245,7 @@ http://localhost:3000
 
 <div align="center">
 
-<img src="images/johana.png" width="160" style="border-radius: 50%;"/><br/><br/>
+<img src="public/images/johana.png" width="160" style="border-radius: 50%;"/><br/><br/>
 <b>Johana Saavedra</b><br/>
 Estudiante de Desarrollo de Software
 
