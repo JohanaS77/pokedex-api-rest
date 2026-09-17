@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex - Buscador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-buscador">
+
+    <img src="images/pockemones.png" alt="Pokémon" class="imagen-fondo">
+    <div class="overlay-oscuro"></div>
+
+    <div class="contenedor">
+        <a href="/" class="btn-volver">&larr; Volver al inicio</a>
+
+        <h1>Buscador de Pokémon</h1>
+        <p>Ingresa el ID del Pokémon que deseas consultar</p>
+
+        <div class="buscador">
+            <input type="number" id="inputId" placeholder="Ej: 25" min="1">
+            <button id="btnBuscar">Buscar</button>
+        </div>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

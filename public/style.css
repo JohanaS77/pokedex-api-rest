@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #008080;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.contenedor {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.contenedor > p {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.buscador {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#inputId {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#btnBuscar {
+    padding: 10px 20px;
+    background: #e3350d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btnBuscar:hover {
+    background: #c22d0b;
+}
+
+/* ===== ESTILO DE LA CARTA POKÉMON ===== */
+
+.card-pokemon {
+    position: relative;
+    max-width: 320px;
+    margin: 0 auto;
+    background: linear-gradient(145deg, #fdfdfd, #e8e8e8);
+    border: 6px solid #f2c94c;
+    border-radius: 18px;
+    padding: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    animation: aparecer 0.4s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.card-header h2 {
+    text-transform: capitalize;
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+.card-header .hp {
+    background: #e3350d;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.card-imagen {
+    background: #f0f4f8;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.card-imagen img {
+    width: 160px;
+    height: 160px;
+}
+
+.card-tipos {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 10px 0;
+}
+
+.tipo {
+    padding: 4px 12px;
+    border-radius: 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.card-stats {
+    text-align: left;
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.card-stats p {
+    margin: 4px 0;
+    color: #333;
+}
+
+.card-stats strong {
+    color: #2c3e50;
+}
+
+/* Mensaje de error */
+.error {
+    color: #e3350d;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* ===== PÁGINA DE INICIO ===== */
+
+.pagina-inicio {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Capa 1: la imagen de fondo */
+.imagen-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* Capa 2: oscurece un poco la imagen para que se lea el texto */
+.overlay-oscuro {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 2;
+}
+
+/* Capa 3: todo el contenido (título, texto, carta, botón) flotando ENCIMA */
+.contenido-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    overflow-y: auto;      /* si la carta no cabe, aparece scroll SOLO aquí, no en toda la página */
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.contenido-inicio h1 {
+    font-size: 42px;
+    color: #ffde00;                      /* amarillo clásico de Pokémon */
+    text-shadow: 
+        2px 2px 0 #2c5aa0,
+        -2px -2px 0 #2c5aa0,
+        2px -2px 0 #2c5aa0,
+        -2px 2px 0 #2c5aa0,
+        0 4px 10px rgba(0,0,0,0.5);       /* sombra difusa extra para que resalte */
+    margin-bottom: 10px;
+}
+
+.instruccion {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.instruccion code {
+    background: rgba(255,255,255,0.2);
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+/* Botón "Ir al buscador" en index.html */
+.btn-buscador {
+    position: fixed;         /* lo saca del flujo centrado y lo fija respecto a la pantalla */
+    bottom: 20px;
+    left: 20px;
+    background: #2c5aa0;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: 3px solid #ffde00; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: 0.2s;
+    z-index: 4;               /* por encima de todas las capas (imagen, overlay, contenido) */
+}
+
+.btn-buscador:hover {
+    background: #1f427f;
+    transform: translateY(-2px);
+}
+
+.btn-buscador:hover {
+    background: #c22d0b;
+}
+
+/* Enlace "Volver al inicio" en buscador.html */
+.btn-volver {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #4a6fa5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    text-decoration: underline;
+}
+
+/* Página del buscador: fija el alto y evita que la imagen se agrande */
+.pagina-buscador {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.pagina-buscador .contenedor {
+    position: relative;
+    z-index: 3;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Botón "cerrar" dentro de la carta */
+.card-pokemon {
+    position: relative; /* necesario para poder posicionar el botón dentro de la carta */
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #2c5aa0;
+    color: white;
+    border: none;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.btn-cerrar:hover {
+    background: #e3350d;
+    transform: scale(1.1);
+}

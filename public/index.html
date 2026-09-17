@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-inicio">
+
+    <!-- Imagen de fondo con todos los pokémon -->
+    <img src="images/pockemones.png" alt="Pokémon" class="imagen-fondo">
+
+    <!-- Capa oscura para que se lea mejor el texto sobre la imagen -->
+    <div class="overlay-oscuro"></div>
+
+    <!-- Contenido que va ENCIMA de la imagen -->
+    <div class="contenido-inicio">
+        <h1>Pokedex</h1>
+        <p class="instruccion">
+            Agrega el ID de un Pokémon al final de la URL. Ejemplo:
+            <code>/25</code> y presiona Enter.
+        </p>
+
+        <!-- Aquí aparecerá la carta SOLO si la URL trae un ID -->
+        <div id="resultado"></div>
+
+        <!-- Botón para ir a la página del buscador con input -->
+        <a href="/buscador.html" class="btn-buscador">Ir al buscador</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
