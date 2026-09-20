@@ -25,7 +25,7 @@
 - [Instalación y uso](#️-instalación-y-uso)
 - [Características técnicas clave](#-características-técnicas-clave)
 - [Mejoras futuras](#-mejoras-futuras)
-- [Desarrolladora](#-desarrolladora)
+- [Desarrolladora](#%E2%80%8D-desarrolladora)
 - [Licencia](#-licencia)
 
 ---
